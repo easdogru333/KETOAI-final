@@ -9,16 +9,6 @@ const PrivacyPolicy = () => {
     <div className="min-h-screen">
       <Navbar />
       <div className="container mx-auto px-4 py-12 max-w-4xl">
-        <button
-          onClick={() => navigate('/')}
-          className="mb-8 flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-          </svg>
-          Back to Home
-        </button>
-        
         <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
         <p className="text-gray-600 mb-8">Last Updated: February 02, 2025</p>
 
