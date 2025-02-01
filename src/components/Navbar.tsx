@@ -38,22 +38,22 @@ const Navbar = () => {
         visible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className="container mx-auto px-2 py-2 sm:px-4 sm:py-4">
+      <div className="container mx-auto px-3 py-3 sm:px-4 sm:py-4">
         <div className="flex items-center justify-between lg:hidden">
-          <a href="/" className="text-lg font-bold font-outfit tracking-tight hover:text-gray-700 transition-colors">
+          <a href="/" className="text-xl font-bold font-outfit tracking-tight hover:text-gray-700 transition-colors">
             KetoAI
           </a>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-2">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-1 text-gray-600 hover:text-gray-900"
+              className="p-1.5 text-gray-600 hover:text-gray-900"
             >
               {isMenuOpen ? (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               ) : (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               )}
@@ -62,17 +62,17 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`lg:hidden ${isMenuOpen ? 'block' : 'hidden'} pt-1.5`}>
-          <div className="flex flex-col gap-0.5">
+        <div className={`lg:hidden ${isMenuOpen ? 'block' : 'hidden'} pt-2`}>
+          <div className="flex flex-col gap-2">
             <button 
               onClick={() => scrollToSection('how-it-works')}
-              className="text-gray-600 hover:text-black font-inter text-xs transition-colors py-1 text-left px-1"
+              className="text-gray-600 hover:text-black font-inter text-sm transition-colors py-1.5 text-left px-1"
             >
               How it works
             </button>
             <button 
               onClick={() => scrollToSection('features')}
-              className="text-gray-600 hover:text-black font-inter text-xs transition-colors py-1 text-left px-1"
+              className="text-gray-600 hover:text-black font-inter text-sm transition-colors py-1.5 text-left px-1"
             >
               Features
             </button>
@@ -82,7 +82,7 @@ const Navbar = () => {
                   navigate('/');
                   setIsMenuOpen(false);
                 }}
-                className="text-gray-600 hover:text-gray-900 transition-colors font-inter text-xs py-1 text-left px-1"
+                className="text-gray-600 hover:text-gray-900 transition-colors font-inter text-sm py-1.5 text-left px-1"
               >
                 Back to Home
               </button>
@@ -90,10 +90,10 @@ const Navbar = () => {
             <div className="pt-1">
               <a
                 href="https://keto-ai.vercel.app/app"
-                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-black via-gray-800 to-black px-3 py-1.5 text-xs font-semibold font-outfit text-white shadow-sm hover:shadow-md transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-gray-700"
+                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-black via-gray-800 to-black px-4 py-2 text-sm font-semibold font-outfit text-white shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-gray-700"
               >
                 <span>Try Beta</span>
-                <svg className="w-3 h-3 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                <svg className="w-4 h-4 ml-1.5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
               </a>
