@@ -36,13 +36,15 @@ const Navbar = () => {
         visible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className="container mx-auto px-2 py-4 flex justify-between items-center">
-        <a href="/" className="text-3xl font-bold font-outfit tracking-tight hover:text-gray-700 transition-colors pl-2">
-          KetoAI
-        </a>
+      <div className="container mx-auto px-2 py-4 flex items-center">
+        <div className="w-1/4">
+          <a href="/" className="text-3xl font-bold font-outfit tracking-tight hover:text-gray-700 transition-colors pl-2">
+            KetoAI
+          </a>
+        </div>
         
         {/* Center Navigation */}
-        <div className="flex-1 flex justify-center gap-8">
+        <div className="w-2/4 flex justify-center gap-8">
           <button 
             onClick={() => scrollToSection('how-it-works')}
             className="text-gray-600 hover:text-black font-inter text-sm transition-colors"
@@ -58,7 +60,7 @@ const Navbar = () => {
         </div>
 
         {/* Right Buttons */}
-        <div className="flex items-center gap-4">
+        <div className="w-1/4 flex items-center justify-end gap-4">
           {isSecondaryPage && (
             <button
               onClick={() => navigate('/')}
