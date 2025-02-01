@@ -86,7 +86,7 @@ const Navbar = () => {
             >
               Features
             </button>
-            {isSecondaryPage && (
+            {isSecondaryPage && !isPrivacyPolicy && (
               <button
                 onClick={() => {
                   navigate('/');
@@ -126,7 +126,7 @@ const Navbar = () => {
 
           {/* Right Buttons */}
           <div className="w-1/4 flex items-center justify-end gap-4">
-            {isSecondaryPage && !isPrivacyPolicy && (
+            {isSecondaryPage && (
               <button
                 onClick={() => navigate('/')}
                 className="text-gray-600 hover:text-gray-900 transition-colors font-inter text-sm"
