@@ -42,12 +42,12 @@ const WhyKetoAI = () => {
             </div>
           </div>
           
-          <div className="flex justify-end pt-4 sm:pt-[2px]">
-            <div className="max-w-[95%] sm:max-w-[90%]">
+          <div className="flex justify-center md:justify-end pt-4 sm:pt-[2px]">
+            <div className="w-[85%] sm:w-[90%] md:w-[95%]">
               <img 
                 src="/lovable-uploads/2cc9bb37-8a25-471d-94c4-1c4084989d0f.png" 
                 alt="KetoAI App Screenshot" 
-                className="rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl"
+                className="w-full rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl"
               />
             </div>
           </div>
