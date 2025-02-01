@@ -45,7 +45,7 @@ const Navbar = () => {
           </a>
           <div className="flex items-center gap-4">
             <a
-              href="https://keto-ai.vercel.app/app"
+              href={`https://keto-ai.vercel.app/app?returnUrl=${encodeURIComponent(window.location.href)}`}
               className="inline-flex items-center justify-center rounded-full bg-black/95 px-4 py-2 text-sm font-medium font-outfit text-white shadow-sm hover:shadow-md transform hover:scale-102 transition-all duration-300"
             >
               <span>Try Beta</span>
@@ -134,7 +134,7 @@ const Navbar = () => {
               </button>
             )}
             <a
-              href="https://keto-ai.vercel.app/app"
+              href={`https://keto-ai.vercel.app/app?returnUrl=${encodeURIComponent(window.location.href)}`}
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-black via-gray-800 to-black px-6 py-3 text-sm font-semibold font-outfit text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-gray-700"
             >
               <span>Try Beta</span>
