@@ -40,10 +40,19 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-3 py-3 sm:px-4 sm:py-4">
         <div className="flex items-center justify-between lg:hidden">
-          <a href="/" className="text-xl font-bold font-outfit tracking-tight hover:text-gray-700 transition-colors">
+          <a href="/" className="text-lg font-bold font-outfit tracking-tight hover:text-gray-700 transition-colors">
             KetoAI
           </a>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
+            <a
+              href="https://keto-ai.vercel.app/app"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-black via-gray-800 to-black px-3 py-1.5 text-xs font-semibold font-outfit text-white shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-gray-700"
+            >
+              <span>Try Beta</span>
+              <svg className="w-3 h-3 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </a>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-1.5 text-gray-600 hover:text-gray-900"
@@ -87,17 +96,6 @@ const Navbar = () => {
                 Back to Home
               </button>
             )}
-            <div className="pt-1">
-              <a
-                href="https://keto-ai.vercel.app/app"
-                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-black via-gray-800 to-black px-4 py-2 text-sm font-semibold font-outfit text-white shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-gray-700"
-              >
-                <span>Try Beta</span>
-                <svg className="w-4 h-4 ml-1.5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-              </a>
-            </div>
           </div>
         </div>
 
