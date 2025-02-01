@@ -7,8 +7,8 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const isSecondaryPage = location.pathname === '/contact-support';
-  const isPrivacyPage = location.pathname === '/privacy-policy';
+  const isSecondaryPage = location.pathname === '/privacy-policy' || location.pathname === '/contact-support';
+  const isPrivacyPolicy = location.pathname === '/privacy-policy';
 
   const handleScroll = () => {
     const currentScrollPos = window.scrollY;
@@ -126,7 +126,7 @@ const Navbar = () => {
 
           {/* Right Buttons */}
           <div className="w-1/4 flex items-center justify-end gap-4">
-            {(isSecondaryPage || isPrivacyPage) && (
+            {isSecondaryPage && !isPrivacyPolicy && (
               <button
                 onClick={() => navigate('/')}
                 className="text-gray-600 hover:text-gray-900 transition-colors font-inter text-sm"
