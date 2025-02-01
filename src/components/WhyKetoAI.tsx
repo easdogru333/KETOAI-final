@@ -7,8 +7,8 @@ const WhyKetoAI = () => {
         
         <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-start">
           {/* Image moved up for mobile */}
-          <div className="block md:hidden -mt-4 mb-8">
-            <div className="w-full">
+          <div className="block md:hidden -mt-8 mb-8">
+            <div className="w-[90%] mx-auto">
               <img 
                 src="/lovable-uploads/2cc9bb37-8a25-471d-94c4-1c4084989d0f.png" 
                 alt="KetoAI App Screenshot" 
