@@ -4,6 +4,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const isSecondaryPage = location.pathname === '/privacy-policy' || location.pathname === '/contact-support';
@@ -28,6 +29,7 @@ const Navbar = () => {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
+    setIsMenuOpen(false);
   };
 
   return (
@@ -36,48 +38,111 @@ const Navbar = () => {
         visible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className="container mx-auto px-2 py-4 flex items-center">
-        <div className="w-1/4">
-          <a href="/" className="text-3xl font-bold font-outfit tracking-tight hover:text-gray-700 transition-colors pl-2">
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between lg:hidden">
+          <a href="/" className="text-2xl font-bold font-outfit tracking-tight hover:text-gray-700 transition-colors">
             KetoAI
           </a>
-        </div>
-        
-        {/* Center Navigation */}
-        <div className="w-2/4 flex justify-center gap-8">
-          <button 
-            onClick={() => scrollToSection('how-it-works')}
-            className="text-gray-600 hover:text-black font-inter text-sm transition-colors"
-          >
-            How it works
-          </button>
-          <button 
-            onClick={() => scrollToSection('features')}
-            className="text-gray-600 hover:text-black font-inter text-sm transition-colors"
-          >
-            Features
-          </button>
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 text-gray-600 hover:text-gray-900"
+            >
+              {isMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
 
-        {/* Right Buttons */}
-        <div className="w-1/4 flex items-center justify-end gap-4">
-          {isSecondaryPage && (
-            <button
-              onClick={() => navigate('/')}
-              className="text-gray-600 hover:text-gray-900 transition-colors font-inter text-sm"
+        {/* Mobile Menu */}
+        <div className={`lg:hidden ${isMenuOpen ? 'block' : 'hidden'} pt-4`}>
+          <div className="flex flex-col gap-4">
+            <button 
+              onClick={() => scrollToSection('how-it-works')}
+              className="text-gray-600 hover:text-black font-inter text-sm transition-colors py-2"
             >
-              Back to Home
+              How it works
             </button>
-          )}
-          <a
-            href="https://keto-ai.vercel.app/app"
-            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-black via-gray-800 to-black px-6 py-3 text-sm font-semibold font-outfit text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-gray-700"
-          >
-            <span>Try Beta</span>
-            <svg className="w-5 h-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-            </svg>
-          </a>
+            <button 
+              onClick={() => scrollToSection('features')}
+              className="text-gray-600 hover:text-black font-inter text-sm transition-colors py-2"
+            >
+              Features
+            </button>
+            {isSecondaryPage && (
+              <button
+                onClick={() => {
+                  navigate('/');
+                  setIsMenuOpen(false);
+                }}
+                className="text-gray-600 hover:text-gray-900 transition-colors font-inter text-sm py-2"
+              >
+                Back to Home
+              </button>
+            )}
+            <a
+              href="https://keto-ai.vercel.app/app"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-black via-gray-800 to-black px-6 py-3 text-sm font-semibold font-outfit text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-gray-700"
+            >
+              <span>Try Beta</span>
+              <svg className="w-5 h-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex lg:items-center">
+          <div className="w-1/4">
+            <a href="/" className="text-3xl font-bold font-outfit tracking-tight hover:text-gray-700 transition-colors pl-2">
+              KetoAI
+            </a>
+          </div>
+          
+          {/* Center Navigation */}
+          <div className="w-2/4 flex justify-center gap-8">
+            <button 
+              onClick={() => scrollToSection('how-it-works')}
+              className="text-gray-600 hover:text-black font-inter text-sm transition-colors"
+            >
+              How it works
+            </button>
+            <button 
+              onClick={() => scrollToSection('features')}
+              className="text-gray-600 hover:text-black font-inter text-sm transition-colors"
+            >
+              Features
+            </button>
+          </div>
+
+          {/* Right Buttons */}
+          <div className="w-1/4 flex items-center justify-end gap-4">
+            {isSecondaryPage && (
+              <button
+                onClick={() => navigate('/')}
+                className="text-gray-600 hover:text-gray-900 transition-colors font-inter text-sm"
+              >
+                Back to Home
+              </button>
+            )}
+            <a
+              href="https://keto-ai.vercel.app/app"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-black via-gray-800 to-black px-6 py-3 text-sm font-semibold font-outfit text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-gray-800 hover:border-gray-700"
+            >
+              <span>Try Beta</span>
+              <svg className="w-5 h-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </nav>
