@@ -56,7 +56,7 @@ const WhyKetoAI = () => {
           </div>
           
           {/* Image for desktop view */}
-          <div className="hidden md:flex justify-end pt-[2px]">
+          <div className="hidden md:flex justify-end pt-8">
             <div className="w-[95%]">
               <img 
                 src="/lovable-uploads/2cc9bb37-8a25-471d-94c4-1c4084989d0f.png" 
