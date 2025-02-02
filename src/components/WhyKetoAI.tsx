@@ -3,7 +3,7 @@ const WhyKetoAI = () => {
     <section className="py-8 sm:py-20">
       <div className="container mx-auto px-3 sm:px-4">
         {/* Title only visible on desktop */}
-        <h2 className="hidden sm:block text-4xl font-bold text-center mb-8 font-outfit tracking-tight -mt-8">Why KetoAI?</h2>
+        <h2 className="hidden sm:block text-4xl font-bold text-center mb-8 font-outfit tracking-tight -mt-12">Why KetoAI?</h2>
         
         <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-start">
           {/* Image moved up for mobile */}
