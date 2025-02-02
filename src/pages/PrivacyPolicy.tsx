@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <div className="container mx-auto px-4 pt-24 pb-12 sm:py-12 max-w-4xl">
+      <div className="container mx-auto px-4 pt-24 sm:pt-32 pb-12 max-w-4xl">
         <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
         <p className="text-gray-600 mb-8">Last Updated: February 02, 2025</p>
 
