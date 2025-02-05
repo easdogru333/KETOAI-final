@@ -11,10 +11,8 @@ const Hero = () => {
           </h1>
 
           {/* Smaller subtitle for mobile */}
-          <p className="text-lg sm:text-2xl text-gray-600 mb-8 sm:mb-12 font-inter leading-relaxed">
-            Take a photo of your meal and let AI calculate your keto macros.
-            <br className="hidden sm:block" />
-            Precise, fast and easy to use.
+          <p className="text-base sm:text-2xl text-gray-600 mb-8 sm:mb-12 font-inter leading-relaxed">
+            Take a photo of your meal and let AI calculate your keto macros. Precise, fast and easy to use.
           </p>
 
           {/* Enhanced App Store button */}
