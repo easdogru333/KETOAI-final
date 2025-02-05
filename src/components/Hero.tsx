@@ -21,11 +21,11 @@ const Hero = () => {
           <div className="relative inline-flex flex-col items-center">
             {/* Modern status badge */}
             <div className="mb-6">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-black/[0.03] rounded-full">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-gray-100 via-white to-gray-100 rounded-full border border-gray-900 shadow-lg hover:shadow-xl transform hover:scale-[1.03] transition-all duration-500 ease-out">
                 <span className="relative flex h-2 w-2">
                   <span className="inline-flex rounded-full h-2 w-2 bg-red-600"></span>
                 </span>
-                <span className="text-sm font-medium text-gray-900">Coming to App Store</span>
+                <span className="text-sm font-medium text-black">Coming to App Store</span>
               </div>
             </div>
 
