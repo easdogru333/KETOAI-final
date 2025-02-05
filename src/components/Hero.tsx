@@ -1,24 +1,24 @@
 const Hero = () => {
   return (
-    <section className="relative pt-20 pb-16 sm:pt-28 sm:pb-20 overflow-hidden bg-white">
+    <section className="relative pt-12 pb-8 sm:pt-28 sm:pb-20 overflow-hidden bg-white">
       <div className="relative max-w-[1600px] mx-auto px-2 sm:px-4 text-center">
         <div className="max-w-5xl mx-auto">
           {/* Smaller heading for mobile, original size for desktop */}
-          <h1 className="text-[2.5rem] sm:text-[4.5rem] md:text-[5.5rem] font-bold font-outfit tracking-tight leading-[1.1] sm:leading-[1] mb-8">
+          <h1 className="text-[2.5rem] sm:text-[4.5rem] md:text-[5.5rem] font-bold font-outfit tracking-tight leading-[1.1] sm:leading-[1] mb-4 sm:mb-8">
             <span className="bg-clip-text text-transparent bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
               Track your Keto diet simply
             </span>
           </h1>
 
           {/* Smaller subtitle for mobile */}
-          <p className="text-base sm:text-2xl text-gray-600 mb-8 sm:mb-12 font-inter leading-relaxed">
+          <p className="text-base sm:text-2xl text-gray-600 mb-6 sm:mb-12 font-inter leading-relaxed">
             Take a photo of your meal and let AI calculate your keto macros. Precise, fast and easy to use.
           </p>
 
           {/* Enhanced App Store button */}
           <div className="relative inline-flex flex-col items-center">
             {/* Modern status badge */}
-            <div className="mb-6">
+            <div className="mb-4 sm:mb-6">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-gray-100 via-white to-gray-100 rounded-full border border-gray-900 shadow-lg hover:shadow-xl transform hover:scale-[1.03] transition-all duration-500 ease-out">
                 <span className="relative flex h-2 w-2">
                   <span className="inline-flex rounded-full h-2 w-2 bg-red-600"></span>
