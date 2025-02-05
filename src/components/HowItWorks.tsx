@@ -8,8 +8,8 @@ const HowItWorks = () => {
         </h2>
         <div className="grid md:grid-cols-2 gap-6 sm:gap-12 items-center">
           {/* Image */}
-          <div className="md:flex">
-            <div className="w-[95%]">
+          <div className="flex justify-center md:block">
+            <div className="w-[90%] md:w-[95%]">
               <img 
                 src="https://images.unsplash.com/photo-1546964124-0cce460f38ef" 
                 alt="Juicy pan-seared steak with fresh herbs" 
@@ -19,7 +19,7 @@ const HowItWorks = () => {
           </div>
 
           {/* Features */}
-          <div className="flex flex-col justify-between h-full py-2 sm:py-4">
+          <div className="flex flex-col justify-between space-y-8 md:space-y-0 h-full py-2 sm:py-4">
             {/* Feature 1 */}
             <div className="flex gap-4 sm:gap-6">
               <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-black rounded-xl flex items-center justify-center text-white">
