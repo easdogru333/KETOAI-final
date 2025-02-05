@@ -3,8 +3,8 @@ const Hero = () => {
     <section className="relative pt-20 pb-16 sm:pt-28 sm:pb-20 overflow-hidden bg-white">
       <div className="relative max-w-[1600px] mx-auto px-2 sm:px-4 text-center">
         <div className="max-w-5xl mx-auto">
-          {/* Modern heading with gradient */}
-          <h1 className="text-[3.5rem] sm:text-[4.5rem] md:text-[5.5rem] font-bold font-outfit tracking-tight leading-[1] mb-8">
+          {/* Smaller heading for mobile, original size for desktop */}
+          <h1 className="text-[2.5rem] sm:text-[4.5rem] md:text-[5.5rem] font-bold font-outfit tracking-tight leading-[1.1] sm:leading-[1] mb-8">
             <span className="bg-clip-text text-transparent bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
               Track your Keto diet simply
             </span>
