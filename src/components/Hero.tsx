@@ -10,8 +10,8 @@ const Hero = () => {
             </span>
           </h1>
 
-          {/* Refined subtitle */}
-          <p className="text-xl sm:text-2xl text-gray-600 mb-12 font-inter leading-relaxed">
+          {/* Smaller subtitle for mobile */}
+          <p className="text-lg sm:text-2xl text-gray-600 mb-8 sm:mb-12 font-inter leading-relaxed">
             Take a photo of your meal and let AI calculate your keto macros.
             <br className="hidden sm:block" />
             Precise, fast and easy to use.
