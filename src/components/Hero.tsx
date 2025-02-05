@@ -32,10 +32,7 @@ const Hero = () => {
             {/* Button container */}
             <div className="group relative">
               {/* Main button */}
-              <div className="relative bg-black rounded-2xl transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-[1.02]">
-                {/* Inner shine effect */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 bg-[linear-gradient(110deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)]"></div>
-                
+              <div className="relative bg-black rounded-2xl transition-transform duration-300 ease-out transform hover:-translate-y-1 hover:scale-[1.02]">
                 {/* Button content */}
                 <div className="relative px-8 py-4">
                   <img 
@@ -48,7 +45,7 @@ const Hero = () => {
                 {/* Bright red Coming Soon badge */}
                 <div className="absolute -top-2 -right-2 transform rotate-12">
                   <div className="bg-[#FF0000] px-4 py-1.5 rounded-full shadow-lg">
-                    <span className="text-sm font-bold text-white tracking-wide">COMING SOON</span>
+                    <span className="text-sm font-bold text-white tracking-wide uppercase">Coming Soon</span>
                   </div>
                 </div>
               </div>
