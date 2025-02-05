@@ -1,10 +1,6 @@
 const Hero = () => {
   return (
-    <section className="relative pt-20 pb-16 sm:pt-28 sm:pb-20 overflow-hidden">
-      {/* Modern background effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_#fef2f2_0%,_transparent_25%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_#f8fafc_0%,_transparent_25%)]"></div>
-      
+    <section className="relative pt-20 pb-16 sm:pt-28 sm:pb-20 overflow-hidden bg-white">
       <div className="relative max-w-[1600px] mx-auto px-2 sm:px-4 text-center">
         <div className="max-w-5xl mx-auto">
           {/* Modern heading with gradient */}
