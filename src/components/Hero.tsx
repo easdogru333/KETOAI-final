@@ -1,28 +1,67 @@
 const Hero = () => {
   return (
-    <section className="pt-16 pb-6 sm:pt-20 sm:pb-16">
-      <div className="max-w-[1000px] mx-auto px-3 sm:px-4 text-center">
-        <h1 className="text-4xl sm:text-5xl md:text-[65px] font-bold mb-4 sm:mb-6 font-outfit tracking-tighter leading-[1.1] text-black">
-          Track your Keto diet simply
-        </h1>
-        <p className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto font-inter leading-relaxed">
-          Take a photo of your meal and let AI calculate your keto macros.
-          <br className="hidden sm:block" />
-          Precise, fast and easy to use.
-        </p>
-        <div className="flex items-center justify-center gap-4 sm:gap-6 mb-12">
-          <div className="bg-gradient-to-r from-red-50 to-red-100 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full shadow-sm">
-            <span className="text-red-500 font-inter font-medium tracking-wide text-xs sm:text-sm uppercase">Coming soon</span>
-          </div>
-          <svg width="32" height="20" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform translate-y-1 sm:w-[40px] sm:h-[24px]">
-            <path d="M39.0607 13.0607C39.6464 12.4749 39.6464 11.5251 39.0607 10.9393L29.5147 1.39339C28.9289 0.807609 27.9792 0.807609 27.3934 1.39339C26.8076 1.97917 26.8076 2.92892 27.3934 3.51471L35.8787 12L27.3934 20.4853C26.8076 21.0711 26.8076 22.0208 27.3934 22.6066C27.9792 23.1924 28.9289 23.1924 29.5147 22.6066L39.0607 13.0607ZM0 13.5H38V10.5H0V13.5Z" fill="#4B5563"/>
-          </svg>
-          <div className="bg-black rounded-full px-5 py-2.5 hover:bg-gray-900 transition-all transform hover:scale-105 duration-300 shadow-lg">
-            <img 
-              src="/lovable-uploads/14f2f9ec-eeb3-423e-b631-3138847c3110.png" 
-              alt="Download on the App Store" 
-              className="h-9 sm:h-10"
-            />
+    <section className="relative pt-20 pb-16 sm:pt-28 sm:pb-20 overflow-hidden">
+      {/* Modern background effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_#fef2f2_0%,_transparent_25%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_#f8fafc_0%,_transparent_25%)]"></div>
+      
+      <div className="relative max-w-[1600px] mx-auto px-2 sm:px-4 text-center">
+        <div className="max-w-5xl mx-auto">
+          {/* Modern heading with gradient */}
+          <h1 className="text-[3.5rem] sm:text-[4.5rem] md:text-[5.5rem] font-bold font-outfit tracking-tight leading-[1] mb-8">
+            <span className="bg-clip-text text-transparent bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+              Track your Keto diet simply
+            </span>
+          </h1>
+
+          {/* Refined subtitle */}
+          <p className="text-xl sm:text-2xl text-gray-600 mb-12 font-inter leading-relaxed">
+            Take a photo of your meal and let AI calculate your keto macros.
+            <br className="hidden sm:block" />
+            Precise, fast and easy to use.
+          </p>
+
+          {/* Enhanced App Store button */}
+          <div className="relative inline-flex flex-col items-center">
+            {/* Modern status badge */}
+            <div className="mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-black/[0.03] rounded-full">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
+                </span>
+                <span className="text-sm font-medium text-gray-900">Coming to App Store</span>
+              </div>
+            </div>
+
+            {/* Button container */}
+            <div className="group relative">
+              {/* Main button */}
+              <div className="relative bg-black rounded-2xl transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-[1.02]">
+                {/* Inner shine effect */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 bg-[linear-gradient(110deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)]"></div>
+                
+                {/* Button content */}
+                <div className="relative px-8 py-4">
+                  <img 
+                    src="/lovable-uploads/14f2f9ec-eeb3-423e-b631-3138847c3110.png" 
+                    alt="Download on the App Store" 
+                    className="h-14 sm:h-16 transform transition-all duration-300 group-hover:scale-[1.03]"
+                  />
+                </div>
+
+                {/* Bright red Coming Soon badge */}
+                <div className="absolute -top-2 -right-2 transform rotate-12">
+                  <div className="bg-[#FF0000] px-4 py-1.5 rounded-full shadow-lg">
+                    <span className="text-sm font-bold text-white tracking-wide">COMING SOON</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Decorative elements */}
+            <div className="absolute -left-16 top-1/2 w-32 h-32 bg-gradient-to-br from-gray-900/5 to-transparent rounded-full blur-2xl opacity-60"></div>
+            <div className="absolute -right-16 top-1/2 w-32 h-32 bg-gradient-to-bl from-gray-900/5 to-transparent rounded-full blur-2xl opacity-60"></div>
           </div>
         </div>
       </div>
