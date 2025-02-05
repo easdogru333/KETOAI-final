@@ -1,12 +1,19 @@
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <Link to="/" className="text-xl font-semibold">
+            <Link to="/" className="text-2xl font-bold font-outfit">
               KetoAI
             </Link>
           </div>
@@ -20,9 +27,12 @@ const Header = () => {
               </svg>
               Back
             </a>
-            <Link to="/" className="text-gray-600 hover:text-gray-900">
+            <button 
+              onClick={() => scrollToSection('how-it-works')}
+              className="text-gray-600 hover:text-gray-900 cursor-pointer"
+            >
               How it works
-            </Link>
+            </button>
             <Link to="/" className="text-gray-600 hover:text-gray-900">
               Features
             </Link>
