@@ -27,8 +27,7 @@ const Hero = () => {
             <div className="mb-6">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-black/[0.03] rounded-full">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
+                  <span className="inline-flex rounded-full h-2 w-2 bg-red-600"></span>
                 </span>
                 <span className="text-sm font-medium text-gray-900">Coming to App Store</span>
               </div>
